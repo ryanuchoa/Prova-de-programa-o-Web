@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Controle Simples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="painel">
+    <h1>Controle Simples</h1>
+
+    <div class="salario-box">
+      <input type="number" id="salario" placeholder="Digite seu salário (R$)" />
+      <button onclick="salvarSalario()">Salvar Salário</button>
+    </div>
+
+    <div class="formulario">
+      <input type="date" id="data" />
+      <input type="text" id="categoria" placeholder="Categoria" />
+      <input type="number" id="valor" placeholder="Valor (R$)" />
+      <button onclick="adicionar()">Adicionar</button>
+    </div>
+
+    <button id="toggleLista" onclick="mostrar()">Mostrar Lista ▼</button>
+
+    <div id="listaWrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Categoria</th>
+            <th>Valor (R$)</th>
+            <th>Pagar</th>
+          </tr>
+        </thead>
+        <tbody id="tabela"></tbody>
+      </table>
+
+      <div id="rodape">
+        <div>Salário: R$ <span id="verSalario">0,00</span></div>
+        <div>Previsto: R$ <span id="previsto">0,00</span></div>
+        <div>Efetivado: R$ <span id="pago">0,00</span></div>
+        <div>Saldo: R$ <span id="saldo">0,00</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
